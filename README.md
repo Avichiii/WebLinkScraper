@@ -1,4 +1,4 @@
-# WebLinkScrapper
+# WebLinkScraper
 
 
 scrapes website links and store them in a output file.
