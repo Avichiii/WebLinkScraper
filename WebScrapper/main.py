@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def get_link(url_link):
-    url = url_link #<---- enter the web address you want to fetch links from!
+    url = url_link #<---- enteres the web address you want to fetch links from!
 
     r = requests.get(url)
 
@@ -22,10 +22,10 @@ def get_link(url_link):
                 new_links = ''
         
                 if(link.get('href').startswith('/')):
-                    new_links = url_link + link.get('href') #<---- enter the web address you want to fetch links from!
+                    new_links = url_link + link.get('href') #<---- enteres the web address you want to fetch links from!
                     # print(new_links)
 
-                if(link.get('href').startswith(url_link)): #<---- enter the web address you want to fetch links from!
+                if(link.get('href').startswith(url_link)): #<---- enteres the web address you want to fetch links from!
                     new_links = link.get('href')
                     # print(new_links)
 
