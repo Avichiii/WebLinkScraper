@@ -21,16 +21,16 @@ def get_link(url_link):
         with open('output.txt', 'a') as f:
             if(link.get('href') != '#'):
                 new_links = ''
-        
-                if(link.get('href').startswith('/')):
-                    new_links = url_link + link.get('href') #<---- enter the web address you want to fetch links from!
-                    # print(new_links)
 
-                if(link.get('href').startswith(url_link)): #<---- enter the web address you want to fetch links from!
-                    new_links = link.get('href')
-                    # print(new_links)
-        
-                store_links = f.write(new_links + '\n')
+                try:
+                    if(link.get('href').startswith('/')):
+                        new_links = url_link + link.get('href') #<---- enter the web address you want to fetch links from!
+                        # print(new_links)
+            
+                    f.write(new_links + '\n')
+
+                except Exception as e:
+                    print(e)
     
     return 1 #<---- means we are returning True
 
