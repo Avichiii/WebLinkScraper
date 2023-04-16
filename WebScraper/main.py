@@ -24,7 +24,7 @@ def get_link(url_link):
 
 if __name__ == '__main__':
     web_url = input("Enter a web address: ")
-    get_link(f"https://{web_url}")
+    get_link(f"https://www.{web_url}")
 
 
 
